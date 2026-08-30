@@ -1,49 +1,64 @@
-# Snake Game
+# SNAKGAME
+
+This project contains two small Python programs: a classic terminal Snake game and a simple Iron Man-inspired drawing made with `turtle`.
+
+## Project Contents
+
+### 1. Snake Game
 
 A classic terminal-based Snake game built with Python and the `curses` library.
 
-## Description
-
-This project is a simple arcade-style Snake game that runs in the terminal. The player controls the snake using the arrow keys, collects food to grow longer, and avoids crashing into the walls or itself.
-
-## Features
-
-- Smooth terminal gameplay
+Features:
 - Arrow-key controls
 - Random food spawning
-- Snake growth on eating food
-- Collision detection
-- Simple and lightweight Python implementation
+- Snake growth when eating food
+- Wall and self-collision detection
+- Simple terminal-based gameplay
 
-## Requirements
-
-- Python 3
-- Linux/macOS terminal environment (or another terminal that supports `curses`)
-
-## How to Run
-
-1. Open a terminal in the project folder.
-2. Run:
+Run it with:
 
 ```bash
 python3 SnakeGame.py
 ```
 
-## Controls
-
+Controls:
 - Up Arrow: move up
 - Down Arrow: move down
 - Left Arrow: move left
 - Right Arrow: move right
+
+### 2. Iron Man Drawing
+
+A Python script that draws an Iron Man-inspired face using the `turtle` graphics library.
+
+Features:
+- Colored background and face design
+- Polygon-based drawing
+- Lightweight, standalone graphics demo
+
+Run it with:
+
+```bash
+python3 ironman.py
+```
+
+## Requirements
+
+- Python 3
+- `curses` support for the Snake game (works best in a terminal)
+- Standard Python `turtle` module for the Iron Man drawing
 
 ## Project Structure
 
 ```text
 SNAKGAME/
 ├── SnakeGame.py
+├── ironman.py
 ├── README.md
 ```
 
 ## Notes
 
-This game was designed for a terminal environment and uses Python's built-in `curses` module, so it works best in a terminal emulator rather than a standard GUI.
+- `SnakeGame.py` is intended for terminal use and is best run in a terminal window.
+- `ironman.py` opens a graphical window using Python's `turtle` module.
+- Both scripts are lightweight examples and can be run independently.
