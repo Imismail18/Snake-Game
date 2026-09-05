@@ -22,6 +22,7 @@ def init_game():
 def create_snake(screen_hight, screen_width):
     start_x = screen_width // 4
     start_y = screen_hight // 2
+    
     return [
         [start_y, start_x],
         [start_y, start_x - 1],
@@ -45,7 +46,8 @@ def spawn_food(snake, screen_hight, screen_width):
 def is_game_over(snake, screen_hight, screen_width):
     head_y, head_x = snake[0]
     is_wall_hit = head_y in (0, screen_hight - 1) or head_x in (0, screen_width - 1)
-    is_self_collision = snake[0] in snake[1:]
+    is_self_collision = snake[0] in snake[1:],
+    
     return is_wall_hit or is_self_collision
 
 
@@ -60,6 +62,7 @@ def move_snake(snake, key):
     elif key == curses.KEY_RIGHT: new_head[1] += 1
 
     snake.insert(0, new_head)
+    
     return new_head
 
 
@@ -103,6 +106,7 @@ def main():
 
 if __name__ == "__main__":
     try:
+        
         main()
-    except KeyboardInterrupt:
-        curses.endwin()
+        
+    except KeyboardInterrupt: curses.endwin()
